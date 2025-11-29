@@ -5,1003 +5,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grooming organisation for liberal development</title>
+    <title>grooming organisation for leadership development</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     
     
-    
-    
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #1a1a2e;
-            --secondary-color: #16213e;
-            --accent-color: #e94560;
-            --accent-secondary: #f39c12;
-            --text-color: #333;
-            --light-text: #ffffff;
-            --light-bg: #f8f9fa;
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            --card-shadow-hover: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--light-bg);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent-color);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #d63447;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(26, 26, 46, 0.95);
-            backdrop-filter: blur(15px);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background: var(--gradient-accent);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-menu a {
-            color: var(--light-text);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-            font-weight: 500;
-        }
-
-        .nav-menu a:hover {
-            color: var(--accent-color);
-            text-shadow: 0 0 10px rgba(233, 69, 96, 0.5);
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            background: var(--gradient-accent);
-            transition: all 0.3s ease;
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-            left: 0;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a"><stop offset="0" stop-color="%23ffffff" stop-opacity=".2"/><stop offset="1" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><g opacity=".6"><circle cx="200" cy="200" r="120" fill="url(%23a)"/><circle cx="800" cy="300" r="180" fill="url(%23a)"/><circle cx="400" cy="700" r="150" fill="url(%23a)"/><circle cx="700" cy="700" r="100" fill="url(%23a)"/></g></svg>') center/cover;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            animation: fadeInUp 1.2s ease;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #4facfe, #00f2fe);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-        }
-
-        .hero .subtitle {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            opacity: 0.95;
-            font-weight: 300;
-            margin-top: 2.8rem;
-        }
-
-        .hero .description {
-            /* font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-            height: auto; */
-            /* max-width: 600px;
-            margin-left: auto;
-            margin-right: auto; */
-    background-image: url('klsu.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 2rem;
-    border-radius: 20px;
-    width: 600px;
-    height: 200px;
-    
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 15px 35px;
-            background: var(--gradient-secondary);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(233, 69, 96, 0.4);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-button.secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--accent-color);
-        }
-
-        /* Floating Animation */
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-            33% {
-                transform: translateY(-20px) rotate(1deg);
-            }
-
-            66% {
-                transform: translateY(-10px) rotate(-1deg);
-            }
-        }
-
-        /* Section Styling */
-        section {
-            padding: 6rem 0;
-            position: relative;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 4rem;
-            position: relative;
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: var(--gradient-accent);
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--light-bg);
-            position: relative;
-        }
-
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%234facfe;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%2300f2fe;stop-opacity:0.05" /></linearGradient></defs><polygon points="0,0 1000,200 1000,800 0,1000" fill="url(%23grad1)"/></svg>') center/cover;
-            opacity: 0.3;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 5rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        /* Profile Picture with actual image */
-        .profile-pic {
-            width: 100%;
-            max-width: 400px;
-            height: 450px;
-            border-radius: 25px;
-            box-shadow: var(--card-shadow-hover);
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            color: white;
-            transition: all 0.3s ease;
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .profile-pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 25px;
-        }
-
-        .profile-pic:hover {
-            transform: scale(1.05);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-        }
-
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            
-        }
-
-        .about-text p {
-            margin-bottom: 2rem;
-        }
-
-        .highlight {
-            background: var(--gradient-accent);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-        }
-
-        /* Skills Section */
-        .skills {
-            background: var(--gradient-dark);
-            color: white;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .skill-category {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-category::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-accent);
-        }
-
-        .skill-category:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .skill-category h3 {
-            color: var(--light-text);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .skill-category h3 i {
-            font-size: 1.8rem;
-            color: var(--accent-color);
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .skill-list li:hover {
-            padding-left: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-        }
-
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
-
-        .skill-level {
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        /* Education Section */
-        .education {
-            background: var(--light-bg);
-            position: relative;
-        }
-
-        .education-timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .education-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--gradient-accent);
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .education-item {
-            position: relative;
-            background: white;
-            padding: 2.5rem;
-            margin: 3rem 0;
-            border-radius: 20px;
-            box-shadow: var(--card-shadow);
-            width: 45%;
-            transition: all 0.3s ease;
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .education-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--card-shadow-hover);
-        }
-
-        .education-item:nth-child(odd) {
-            left: 0;
-        }
-
-        .education-item:nth-child(even) {
-            left: 55%;
-        }
-
-        .education-item::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 25px;
-            height: 25px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            transform: translateY(-50%);
-            box-shadow: 0 0 15px rgba(233, 69, 96, 0.5);
-        }
-
-        .education-item:nth-child(odd)::before {
-            right: -65px;
-        }
-
-        .education-item:nth-child(even)::before {
-            left: -65px;
-        }
-
-        .education-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.4rem;
-        }
-
-        .education-item h4 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        /* CV Download with actual file */
-        .cv-download {
-            display: inline-block;
-            margin-top: 3rem;
-            padding: 15px 35px;
-            background: var(--gradient-secondary);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .cv-download:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(233, 69, 96, 0.4);
-        }
-
-        /* Interests Section */
-        .interests {
-            background: var(--gradient-primary);
-            color: white;
-        }
-
-        .interests .skill-category {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .interests .skill-category:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        /* Projects Section */
-        .projects {
-            background: var(--light-bg);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
-            position: relative;
-            border-top: 4px solid var(--accent-color);
-        }
-
-        .project-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--card-shadow-hover);
-        }
-
-        .project-header {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 2.5rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .project-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-accent);
-        }
-
-        .project-content {
-            padding: 2.5rem;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .project-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--gradient-accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .project-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
-        }
-
-        .project-link.github {
-            background: var(--gradient-dark);
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-        }
-
-        .tech-tag {
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* ...existing code... */
-.gallery-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 15px;
-    display: block;
-}
-
-        /* Contact Section */
-        .contact {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-        }
-
-        .contact-info h3 {
-            margin-bottom: 2rem;
-            color: var(--accent-color);
-            font-size: 1.8rem;
-        }
-
-        .contact-info p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateX(10px);
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            margin-right: 1.5rem;
-            color: var(--accent-color);
-            width: 30px;
-        }
-
-        .contact-form {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.8rem;
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 15px rgba(233, 69, 96, 0.3);
-        }
-
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(233, 69, 96, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background: #0a0a0a;
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-        }
-
-        .social-links {
-            margin: 2rem 0;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 2rem;
-            margin: 0 1.5rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-            transform: translateY(-5px);
-            text-shadow: 0 0 15px rgba(233, 69, 96, 0.5);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                /* display: none; */
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.4rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 3rem;
-            }
-
-            .education-timeline::before {
-                left: 30px;
-            }
-
-            .education-item {
-                width: calc(100% - 80px);
-                left: 80px !important;
-            }
-
-            .education-item::before {
-                left: -40px !important;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
-
-            .skills-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Music Section */
-        .music {
-            background: var(--gradient-dark);
-            color: white;
-            text-align: center;
-        }
-
-        .playlist-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 2.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .playlist {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .song-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            margin: 1rem 0;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .song-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateX(10px);
-        }
-
-        .song-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .play-btn {
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .play-btn:hover {
-            background: #d63447;
-            transform: scale(1.1);
-        }
-
-        .audio-player {
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        /* Certificates Section */
-        .certificates {
-            background: var(--light-bg);
-        }
-
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .certificate-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--accent-color);
-        }
-
-        .certificate-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--card-shadow-hover);
-        }
-
-        .certificate-image {
-            width: 100%;
-            height: 250px;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .certificate-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .certificate-content {
-            padding: 2.5rem;
-        }
-
-        .certificate-content h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .certificate-content p {
-            margin-bottom: 1rem;
-            color: var(--text-color);
-        }
-
-        .certificate-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--gradient-accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-        }
-
-        .certificate-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
-        }
-    </style>
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav>
+     <nav>
         <div class="nav-container">
             <img src="photo.jpg" alt="Logo" class="logo" style="width: 70px; height: 70px; border-radius: 70%;">
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -1017,16 +35,20 @@
     <section id="home" class="hero">
         <div class="hero-content">
         
-             <p class="subtitle">Grooming organization for liberal development</p>
+             <p class="subtitle">Grooming organization for leadership development</p>
                 <p class="description">Restore hope, Empower Marginalized people, 
                     Transform communities into Self-reliant and building a sustainable future </p>
             <div class="cta-buttons">
                 <a href="#about" class="cta-button">Discover our Journey</a>
                 <a href="#contact" class="cta-button secondary">Let's Collaborate</a>
+                <!--new gallery button-->
+                 <button id="open-gallery-btn" class="cta-button" aria-controls="gallery" aria-expanded="false">View Gallery</button>
             </div>
         </div>
     </section>
 
+
+    
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -1038,13 +60,13 @@
 
                 </div>
                 <div class="about-text">
-                    <p> The Grooming Organization for Liberal Development <span class="highlight">(GOLD)</span>, is a non-profit community-based
-organization formed in response to the growing challenges facing refugees and marginalized people
+                    <p> The Grooming Organization for Leadership Development <span class="highlight">(GOLD)</span>, is a non-profit community-based
+organization formed in response to the growing challenges facing refugees and vulnerable people
 affected by conflict and isolation.</p>
 
-  <p> The Grooming Organization for Liberal Development is dedicated to tackling the pressing challenges 
-    faced by refugees and marginalized communities, we want to create a positive impact by
- <span class="highlight">restoring hope</span>, <span class="highlight">empowering marginalized people</span>, and <span class="highlight">transforming communities into self-reliant
+  <p> The Grooming Organization for Leadership Development is dedicated to tackling the pressing challenges 
+    faced by refugees and vulnerable communities, we want to create a positive impact by
+ <span class="highlight">restoring hope</span>, <span class="highlight">empowering vulnerable people</span>, and <span class="highlight">transforming communities into self-reliant
   </span>, <span class="highlight">building a sustainable future.
   </span>Through innovative programs and sustainable solutions, 
     we work to build a future where every individual—regardless of background—has the opportunity to live with dignity, purpose, and resilience. </p>
@@ -1062,6 +84,55 @@ affected by conflict and isolation.</p>
             </div>
         </div>
     </section>
+
+    <!-- General Goals and Objectives Section -->
+<section id="goals" class="goals">
+    <div class="container">
+        <h2 class="section-title">General Goals</h2>
+        <ul>
+            <li>To empower individuals through education, training, and mentorship
+</li>
+            <li>To foster inclusive and sustainable community development
+</li>
+            <li>To promote peacebuilding and conflict resolution
+</li>
+            <li>To advocate for human rights and gender equality
+</li>
+            <li>To support livelihoods and entrepreneurship initiatives
+</li>
+            <li>To engage youth in meaningful community participation
+</li>
+            <li>To collaborate with partners for greater impact
+</li>
+<li>To promote environmental sustainability and climate action
+</li>
+<li>To strengthen public health and wellness in the community</li>
+        </ul>
+
+        <h2 class="section-title">Objectives</h2>
+        <ul>
+ <li>Conduct regular workshops and training sessions on life skills, leadership, and vocational skills.
+</li>
+ <li>Provide educational support such as tutoring, literacy programs, and scholarships for vulnerable children and youth</li>
+ <li>Facilitate community peace forums and mediation sessions to address local conflicts.</li>
+ <li>Organize awareness campaigns on gender-based violence, child protection, and human rights.
+</li>
+<li>Offer small business training, startup support, and financial literacy for women and youth.
+</li>
+<li>Establish youth clubs and leadership programs to encourage civic engagement and responsibility.
+</li>
+<li>Launch tree planting, clean-up days, and environmental education programs in schools and communities</li>
+<li>Develop partnerships with NGOs, government bodies, and faith-based organizations for resource mobilization and project implementation.
+</li>
+<li>Create a community resource center for learning, counseling, and access to digital tools.
+</li>
+<li>Monitor and evaluate all programs to ensure effectiveness and community relevance.
+</li>
+<li>Deliver community-based health outreach programs that provide essential services, health education, and preventive care to improve overall well-being and reduce health disparities.</li>
+
+    </ul>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
@@ -1129,59 +200,83 @@ affected by conflict and isolation.</p>
     <section id="interests" class="interests">
         <div class="container">
             <h2 class="section-title">Our volunteers</h2>
-
-
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class=""></i>Founder and CEO</h3>
                     <img src="james.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
                     <ul class="skill-list">
-                        <li>James Idriss, <br> Bachelor in political science and public adminstration. <br> MOI University.</li>
+                    <li>James Idriss, Founder and Executive Director</li>
                     </ul>
                 </div>
 
 
                 <div class="skill-category">
-                    <h3><i class=""></i>Program Manager</h3>
                      <img src="said.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
                     <ul class="skill-list">
-                        <li>Turabi Said Kondali, <br> Master of Business adminstration in project management. <br>New Hemisphere University.</li>
-                        
+                    <li>Turabi Said Kondali, Program manager</li>   
                     </ul>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class=""></i>Finance Officer</h3>
                      <img src="mic.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
                     <ul class="skill-list">
-                        <li>Micah Butrous, <br> Bachelor in Sustainable Development. <br>st Louis University.</li>
-                        
+                    <li>Micah Butrous, Finance Officer</li> 
                     </ul>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class=""></i>ICT and Social media manager</h3>
-                     <img src="samson.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
-                    <ul class="skill-list">
-                        <li>Samson A. Saeed, <br> certificate in Software Engineering. <br>Eldoret National Polytechnic.</li>
-                        
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class=""></i>Human Resource</h3>
                      <img src="nasrin.png" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
                     <ul class="skill-list">
-                        <li>Nasrin Musa, <br>Diploma in Social work. <br>Masinde Muliro University.</li>
-                        
+                    <li>Nasrin Musa, Human Resources Manager</li>
                     </ul>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class=""></i>Member</h3>
+                     <img src="jindami.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
+                    <ul class="skill-list">
+                    <li>Jindami Anur Kome, Logistic Officer</li>
+                    </ul>
+                </div>
+
+
+                <div class="skill-category">
+                     <img src="majdi.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
+                    <ul class="skill-list">
+                    <li>Daniel Majdi Osman, Secretary General</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                     <img src="samson.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
+                    <ul class="skill-list">
+                    <li>Samson Abdulazim Saeed, ICT Officer</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                     <img src="Hiba.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
+                    <ul class="skill-list">
+                    <li>Romia Hussien, Health Coordinator</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                     <img src="kunda.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
+                    <ul class="skill-list">
+                    <li>Kunda John, workshops Manager</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                     <img src="chris.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
+                    <ul class="skill-list">
+                    <li>Christopher Musa, protection Officer</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
                     <img src="seliman.jpg" alt="Samson" class="profile-pic" style="width: 200px; height: 200px; border-radius: 50%;">
                     <ul class="skill-list">
-                        <li>Younias A. Seliman, <br>Diploma in Social Work. <br>Turkana College</li>
+                    <li>Younias Abdurahaman Seliman, Member</li>
                         
                     </ul>
                 </div>
@@ -1197,7 +292,7 @@ affected by conflict and isolation.</p>
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-header">
+                    <div id="project-climate" class="project-card">
          <h3>ClIMATE CHANGE</h3>
          <P>Community Climate Action & Tree Planting Initiative</P>
 
@@ -1216,7 +311,7 @@ Job creation through nursery and green entrepreneurship
 
 
                 <div class="project-card">
-                 <div class="project-header">
+                 <div id="project-livelihoods" class="project-card">
                      <h3>LIVELIHOODS</h3>
                      <p>Refugee & Host Community Skills for Income (RHCSI)</p>
                         </div>
@@ -1233,7 +328,7 @@ Financial literacy and savings group support Market days and business mentorship
 
 
                 <div class="project-card">
-                    <div class="project-header">
+                    <div id="project-education" class="project-card">
                         <h3>EDUCATION</h3>
                         <p>Digital and Inclusive Learning Program (DILP)</p>
                     </div>
@@ -1251,7 +346,7 @@ Increased school retention and performance Reduced gender and disability barrier
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
+                    <div id="project-health" class="project-card">
                         <h3>Health Programs</h3>
                         <p>Healthy Families, Healthy Futures (HFHF)</p>
                     </div>
@@ -1274,68 +369,63 @@ Reduced cases of malnutrition and preventable diseases Better hygiene practices 
     </section>
 
 
-     <!-- # vision,mission, and values -->
-      <div class="container" style="background-color: #00f2fe;">
-    <h1 style="text-align: center;">Our Vision</h1 style= padding: 20px;>
-
-    <div class="section">
-      <p>
-    We are committed to empowering people, restoring hope, liberating, creating opportunities, and
-    transforming communities towards being resilient and developmentally orientated.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2 style="text-align: center ;">Mission</h2>
-      <p>
- To empower refugees and vulnerable communities towards being self-reliant and building a sustainable future.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2 style="text-align: center;">Core values and principles</h2>
-      <p>
- Integrity<br>
- Accountability<br>
- Inclusivity<br>
- Community engagement<br>
- Respect<br>
- Trust<br>
- Sustainability<br>
- Teamwork<br>
-      </p>
-    </div>
-  </div>
-
-<!-- Gallery Section with 6 photos -->
-<section id="gallery" class="gallery" style="background: var(--light-bg);">
+<!-- Vision, Mission, and Core Values Section -->
+<section id="vision-mission" class="vision-mission">
   <div class="container">
-    <h2 class="section-title">Gallery</h2>
-    <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
-      <div class="gallery-item">
-        <img src="1.jpg" alt="Gallery Photo 1" style="width:100%; border-radius: 15px;">
+    
+    <!-- Vision Card -->
+    <div class="vmc-card vision-card">
+      <div class="vmc-icon">
+        <i class="fas fa-eye"></i>
       </div>
-      <div class="gallery-item">
-        <img src="2.jpg" alt="Gallery Photo 2" style="width:100%; border-radius: 15px;">
-      </div>
-      <div class="gallery-item">
-        <img src="3.jpg" alt="Gallery Photo 3" style="width:100%; border-radius: 15px;">
-      </div>
-      <div class="gallery-item">
-        <img src="4.jpg" alt="Gallery Photo 4" style="width:100%; border-radius: 15px;">
-      </div>
-      <div class="gallery-item">
-        <img src="5.jpg" alt="Gallery Photo 5" style="width:100%; border-radius: 15px;">
-      </div>
-      
-      <div class="gallery-item">
-        <img src="klsu.jpg" alt="Gallery Photo 6" style="width:100%; border-radius: 15px;">
-      </div>
-      <div class="gallery-item">
-        <img src="6.jpg" alt="Gallery Photo 7" style="width:100%; border-radius: 15px;">
+      <h2>Our Vision</h2>
+      <p>We are committed to empowering people, restoring hope, liberating, creating opportunities, and transforming communities towards being resilient and developmentally orientated.</p>
     </div>
-    <div class="gallery-item">
-        <img src="7.jpg" alt="Gallery Photo 8" style="width:100%; border-radius: 15px;">
+
+    <!-- Mission Card -->
+    <div class="vmc-card mission-card">
+      <div class="vmc-icon">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <h2>Our Mission</h2>
+      <p>To empower refugees and vulnerable communities towards being self-reliant and building a sustainable future.</p>
+    </div>
+
+    <!-- Core Values Card -->
+    <div class="vmc-card values-card">
+      <div class="vmc-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <h2>Core Values & Principles</h2>
+      <ul class="values-list">
+        <li><span class="value-badge">Integrity</span></li>
+        <li><span class="value-badge">Accountability</span></li>
+        <li><span class="value-badge">Inclusivity</span></li>
+        <li><span class="value-badge">Community Engagement</span></li>
+        <li><span class="value-badge">Respect</span></li>
+        <li><span class="value-badge">Trust</span></li>
+        <li><span class="value-badge">Sustainability</span></li>
+        <li><span class="value-badge">Teamwork</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery hidden" style="background: var(--light-bg); padding: 6rem 0;">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+      <h2 class="section-title" style="margin:0;">Gallery</h2>
+      <button id="close-gallery-btn" class="cta-button secondary" aria-controls="gallery">Close Gallery</button>
+    </div>
+
+    <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+      <div class="gallery-item"><img src="1.jpg" alt="Gallery Photo 1" style="width:100%; border-radius:15px;"></div>
+      <div class="gallery-item"><img src="2.jpg" alt="Gallery Photo 2" style="width:100%; border-radius:15px;"></div>
+      <div class="gallery-item"><img src="3.jpg" alt="Gallery Photo 3" style="width:100%; border-radius:15px;"></div>
+      <!-- add/remove items as needed -->
+    </div>
   </div>
 </section>
   
@@ -1372,8 +462,8 @@ Reduced cases of malnutrition and preventable diseases Better hygiene practices 
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <strong>Location:</strong><br>
-                            Kakuma, Turkana county-Kenya
+                            <strong>Postal Address:</strong><br>
+                            P.O.BOX 01-30501, Kakuma-kenya
                         </div>
                     </div>
 
@@ -1381,13 +471,14 @@ Reduced cases of malnutrition and preventable diseases Better hygiene practices 
                         <i class="fas fa-clock"></i>
                         <div>
                             <strong>Working Hours</strong><br>
-                            Mon-Fri: 9AM-6PM PST
+                            Mon-Fri: 9AM-5PM PST
                         </div>
                     </div>
                 </div>
 
-                <div class="contact-form">
-                    <form>
+
+         <div class="contact-form">
+          <form action="https://formspree.io/f/mgvjqnzq" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -1418,23 +509,65 @@ Reduced cases of malnutrition and preventable diseases Better hygiene practices 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <h3>GOLD</h3>
-            <p>Restore | Empower | Transform</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gold</h3>
+                    <p>Restore hope, Empower vulnerable people, 
+                    Transform communities into Self-reliant and building a sustainable future</p>
+                    <div class="social-links" aria-label="Social Links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
 
-            
-<div class="social-icons">
-  <a href="https://www.facebook.com/samson.abdullazim" target="_blank"><i class="fab fa-facebook-f" style="color: blue;"></i></a>
-  <a href="https://x.com/SamsonS15357?t=DR6YpjSWJtMoVgdw73qvgQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
-  <a href="https://www.instagram.com/samson199678?igsh=YzljYTk1ODg3Zg==" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/samson-abdulazim-3a9823347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-  
-</div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ul>
+                </div>
 
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#project-climate">climate Change</a></li>
+                        <li><a href="#project-education">education</a></li>
+                        <li><a href="#project-livelihoods">livelihoods</a></li>
+                        <li><a href="#project-health">health programs</a></li>
+                    </ul>
+                </div>
 
-            <p>&copy; 2024 grooming organization for liberal development. All rights reserved.</p>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-links" role="navigation" aria-label="Footer quick links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms</a>
+                <a href="#sitemap">Sitemap</a>
+                <a href="#donate">Donate</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grooming Organization for Leadership Development (GOLD). All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+
+
+<script src="script.js"></script>
 </body>
 
 </html>
